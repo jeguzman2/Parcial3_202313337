@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Controlador.ventanaContralodora;
+import Lógica.figuraGeometrica;
 public class Ventana extends JFrame {
     private JTextField textoR;
     private JTextField textoG;
@@ -81,9 +82,27 @@ public class Ventana extends JFrame {
         }
 
     }
+    private void dibujarFigura(Graphics g) {
+        figuraGeometrica figuraGeometrica = controlador.getTipoFigura();
+        Color color = new Color(figuraGeometrica.getRojo(), figuraGeometrica.getVerde(), figuraGeometrica.getAzul());
+        g.setColor(color);
+
+        int width = panel.getWidth();
+        int height = panel.getHeight();
+
+        if (figuraGeometrica.getTipoFigura().equals("Cuadrado")) {
+            g.fillRect(width / 4, height / 4, width / 2, height / 2);
+        } else if (figuraGeometrica.getTipoFigura().equals("Circulo")) {
+            g.fillOval(width / 4, height / 4, width / 2, height / 2);
+        }
+    }
+
+    public static void main(String[] args) {
+        new Ventana();
+    }
 
     
 
-    }
+}
 
 
