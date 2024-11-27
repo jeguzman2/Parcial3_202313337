@@ -10,7 +10,7 @@ public class ventanaContralodora {
         
         this.figuraGeometrica = new figuraGeometrica("Cuadrado", 255, 255, 255);
     }
-    // Métodos para cambiar el tipo de figura
+    
     public void cambiarATipo(String tipo) {
         figuraGeometrica.setTipoFigura(tipo);
     }
