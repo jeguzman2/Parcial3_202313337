@@ -11,4 +11,12 @@ public class Ventana extends JFrame {
     private JTextField txtB;
     private JPanel panelDibujo;
     private ventanaContralodora controlador;
+
+    public Ventana() {
+        setTitle("PARCIAL DE JUAN GUZMÁN");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(600, 400);
+        setLayout(new BorderLayout());
+    }
 }
+
