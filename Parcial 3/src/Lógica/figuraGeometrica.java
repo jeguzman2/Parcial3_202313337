@@ -2,53 +2,78 @@
 package Lógica;
 
 public class figuraGeometrica {
-    private String tipo; // Puede ser "Cuadrado" o "Circulo"
-    private int red; // Valor R (0-255)
-    private int green; // Valor G (0-255)
-    private int blue; // Valor B (0-255)
+    private String tipoFigura;
+    private int rojo;
+    private int verde; 
+    private int azul; 
 
-    public figuraGeometrica(String tipo, int red, int green, int blue) {
-        this.tipo = tipo;
-        this.red = red;
-        this.green = green;
-        this.blue = blue;
+    public figuraGeometrica(String tipo, int rojo, int verde, int azul) {
+        this.tipoFigura = tipo;
+        this.rojo = rojo;
+        this.verde = verde;
+        this.azul = azul;
     }
 
-    // Getters y Setters
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public int getRed() {
-        return red;
-    }
-
-    public void setRed(int red) {
-        this.red = red;
-    }
-
-    public int getGreen() {
-        return green;
-    }
-
-    public void setGreen(int green) {
-        this.green = green;
-    }
-
-    public int getBlue() {
-        return blue;
-    }
-
-    public void setBlue(int blue) {
-        this.blue = blue;
-    }
+    
 
    
-    public String getColor() {
-        return "RGB(" + red + ", " + green + ", " + blue + ")";
+    public String getTipoFigura() {
+        return tipoFigura;
+    }
+
+
+
+
+    public void setTipoFigura(String tipoFigura) {
+        this.tipoFigura = tipoFigura;
+    }
+
+
+
+
+    public int getRojo() {
+        return rojo;
+    }
+
+
+
+
+    public void setRojo(int rojo) {
+        this.rojo = rojo;
+    }
+
+
+
+
+    public int getVerde() {
+        return verde;
+    }
+
+
+
+
+    public void setVerde(int verde) {
+        this.verde = verde;
+    }
+
+
+
+
+    public int getAzul() {
+        return azul;
+    }
+
+
+
+
+    public void setAzul(int azul) {
+        this.azul = azul;
+    }
+
+
+
+
+    public String obtenerColorAString() {
+        return "RGB(" + rojo + ", " + verde + ", " + azul + ")";
     }
 }
