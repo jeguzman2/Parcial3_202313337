@@ -16,13 +16,14 @@ public class Ventana extends JFrame {
     public Ventana() {
         setTitle("PARCIAL DE JUAN GUZMÁN");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(800, 500);
         setLayout(new BorderLayout());
 
         controlador = new ventanaContralodora();
         JPanel panelIzquierdo = new JPanel();
-        panelIzquierdo.setLayout(new GridLayout(4, 2, 10, 10));
+        panelIzquierdo.setLayout(new GridLayout(5, 2, 10, 10)); 
         panelIzquierdo.setPreferredSize(new Dimension(200, 0));
+        panelIzquierdo.setBackground(new Color(240, 240, 240));
         JLabel labelR = new JLabel("R");
         JLabel labelG = new JLabel("G");
         JLabel labelB = new JLabel("B");
