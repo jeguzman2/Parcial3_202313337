@@ -55,8 +55,35 @@ public class Ventana extends JFrame {
 
         add(panelIzquierdo, BorderLayout.WEST);
 
+        panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                dibujarFigura(g);
+            }
+        };
+        panel.setBackground(Color.WHITE);
+        add(panel, BorderLayout.CENTER);
+
+        setVisible(true);
+    }
+
+    private void cambiarFigura(String tipo) {
+        try {
+            int r = Integer.parseInt(textoR.getText());
+            int g = Integer.parseInt(textoG.getText());
+            int b = Integer.parseInt(textoB.getText());
+            controlador.cambiarATipo(tipo);
+            controlador.cambiadorDeColor(r, g, b);
+            panel.repaint();
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Ingrese valores numéricos válidos para R, G y B.");
+        }
+
+    }
+
     
 
     }
-}
+
 

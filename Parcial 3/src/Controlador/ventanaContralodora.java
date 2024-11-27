@@ -14,7 +14,7 @@ public class ventanaContralodora {
     public void cambiarATipo(String tipo) {
         figuraGeometrica.setTipoFigura(tipo);
     }
-    public void cambiardsorDeColor(int rojo, int verde, int azul) {
+    public void cambiadorDeColor(int rojo, int verde, int azul) {
         figuraGeometrica.setRojo(rojo);
         figuraGeometrica.setVerde(verde);
         figuraGeometrica.setAzul(azul);
