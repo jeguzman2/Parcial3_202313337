@@ -34,7 +34,28 @@ public class Ventana extends JFrame {
         panelIzquierdo.add(textoG);
         panelIzquierdo.add(labelB);
         panelIzquierdo.add(textoB);
+        JButton botonCuadrado = new JButton("Cuadrado");
+        JButton botonCirculo = new JButton("Circulo");
 
+        botonCuadrado.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cambiarFigura("Cuadrado");
+            }
+        });
+
+        botonCirculo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cambiarFigura("Circulo");
+            }
+        });
+        panelIzquierdo.add(botonCuadrado);
+        panelIzquierdo.add(botonCirculo);
+
+        add(panelIzquierdo, BorderLayout.WEST);
+
+    
 
     }
 }
